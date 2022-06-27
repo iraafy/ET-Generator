@@ -6,7 +6,7 @@ class User extends CI_Controller
 {
     public function index()
     {
-        $this->load->view('templates/user_header');
+        $this->load->view('templates/logged_user_header_dark');
         $this->load->view('user/index');
         $this->load->view('templates/user_footer');
     }
@@ -15,11 +15,5 @@ class User extends CI_Controller
     {
         $this->load->view('templates/logged_user_header');
         $this->load->view('user/question_collection');
-    }
-
-    public function generate()
-    {
-        $this->load->view('templates/logged_user_header');
-        $this->load->view('user/generate');
     }
 }
