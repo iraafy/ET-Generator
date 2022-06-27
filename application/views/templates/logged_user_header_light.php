@@ -24,7 +24,7 @@
                         <a class="nav-link" style="color: #3E6D81 !important;" aria-current="page" href="<?= base_url('user') ?>">Home&emsp;</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: #3E6D81 !important;" aria-current="page" href="<?= base_url('user/question_collection') ?>">Question Collection&emsp;</a>
+                        <a class="nav-link" style="color: #3E6D81 !important;" aria-current="page" href="<?= base_url('generate/question_collection') ?>">Question Collection&emsp;</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color: #3E6D81 !important;" aria-current="page" href="<?= base_url('generate') ?>">Generate&emsp;</a>
