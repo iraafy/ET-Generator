@@ -4,7 +4,9 @@
             <p>Below is your question collection. You can edit, delete or even generate new questions!</p>
         </div>
         <div class="row me-2 mt-3" style="float: right;">
-            <button class="btn" style="background-color: #3E6D81; width: 150px; color: white;">Generate More</button>
+            <a href="<?= base_url('generate/index'); ?>">
+                <button class="btn" style="background-color: #3E6D81; width: 150px; color: white;">Generate More</button>
+            </a>
         </div>
         <br><br><br>
         <div class="row">
