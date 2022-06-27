@@ -6,9 +6,9 @@ class User extends CI_Controller
 {
     public function index()
     {
-        $this->load->view('templates/logged_user_header');
+        $this->load->view('templates/user_header');
         $this->load->view('user/index');
-        $this->load->view('templates/logged_user_footer');
+        $this->load->view('templates/user_footer');
     }
 
     public function question_collection()
