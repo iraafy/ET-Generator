@@ -6,7 +6,7 @@ class User extends CI_Controller
 {
     public function index()
     {
-        $this->load->view('templates/logged_user_header_dark');
+        $this->load->view('templates/user_header_dark');
         $this->load->view('user/index');
         $this->load->view('templates/user_footer');
     }

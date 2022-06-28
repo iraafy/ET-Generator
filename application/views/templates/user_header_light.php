@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light ps-3 pe-3 fixed-top" style=" background-color: white !important; box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.35);">
         <div class="container-fluid ">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="<?= base_url('user'); ?>">
                 <img src="<?= base_url('assets/img/'); ?>logo.png" width="60%" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
