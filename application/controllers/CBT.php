@@ -17,4 +17,10 @@ class CBT extends CI_Controller
         $this->load->view('CBT/start_test');
         $this->load->view('templates/auth_footer');
     }
+
+    public function result_test()
+    {
+        $this->load->view('templates/logged_user_header_light');
+        $this->load->view('templates/auth_footer');
+    }
 }
