@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AGQ IELTS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="/">AGQ IELTS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Generate Soal <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tentang</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br/>
+<br/>
+<br/>
+    <div class="container">
+        <form method="POST" action="/process">
+          <div class="form-group">
+            <label>Link Artikel</label>
+            <input type="text" class="form-control" name="link" required="true"/>
+            <br/>
+            <button type="reset" class="btn btn-primary"><i class="fa fa-eraser"></i> Clear</button>
+            <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+          </div>
+        </form>
+    </div>
+
+    <div class="container">
+    	<div class="alert alert-success" role="alert">
+        <p class="alert-heading">Artikel : {{link}}</p>
+        <p>{{article}}</p>
+    	</div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-success" role="alert">
+        <p class="alert-heading">Hasil Tokenization</p>
+        <p>{% for i in result_token %}
+          - {{i}} <br>
+        {%endfor %}</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-success" role="alert">
+        <p class="alert-heading">Hasil Konversi Tree</p>
+        <p>{% for i in result_tree %}
+          - {{i}} <br>
+        {%endfor %}</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-success" role="alert">
+        <p class="alert-heading">Hasil Ekstraksi Kalimat Sederhana</p>
+        <p>{% for i in result_eses %}
+          - {{i}} <br>
+        {%endfor %}</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-success" role="alert">
+        <p class="alert-heading">Hasil Generate Soal</p>
+        <p class="alert-heading">Pertanyaan :</p>
+        <p>{% for i in result_pertanyaan %}
+          - {{i}} <br>
+        {%endfor %}</p>
+        <br>
+        <p class="alert-heading">Jawaban :</p>
+        <p>{% for i in result_jawaban %}
+          - {{i}} <br>
+        {%endfor %}</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-success" role="alert">
+        <p class="alert-heading">Hasil Clear Pronoun</p>
+        <p class="alert-heading">Pertanyaan :</p>
+        <p>{% for i in result_cp_pertanyaan %}
+          - {{i}} <br>
+        {%endfor %}</p>
+        <br>
+        <p class="alert-heading">Jawaban :</p>
+        <p>{% for i in result_cp_jawaban %}
+          - {{i}} <br>
+        {%endfor %}</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-success" role="alert">
+        <p class="alert-heading">Hasil Konversi Tree Kalimat Soal</p>
+        <p>{% for i in result_tree_kalimat_soal %}
+          - {{i}} <br>
+        {%endfor %}</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-success" role="alert">
+        <p class="alert-heading">Hasil Konversi Numerik</p>
+        <p>{% for i in result_numerik %}
+          - {{i}} <br>
+        {%endfor %}</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-success" role="alert">
+        <p class="alert-heading">Hasil Penentuan Jarak</p>
+        <p class="alert-heading">Jarak :</p>
+        <p>{% for i in result_penentuan_jarak_jarak %}
+          - {{i}} <br>
+        {%endfor %}</p>
+        <p class="alert-heading">Pertanyaan :</p>
+        <p>{% for i in result_penentuan_jarak_pertanyaan %}
+          - {{i}} <br>
+        {%endfor %}</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-success" role="alert">
+        <p class="alert-heading">Hasil Sinonim</p>
+        <p>{% for i in result_sinonim %}
+          - {{i}} <br>
+        {%endfor %}</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-success" role="alert">
+        <p class="alert-heading">Hasil Grammar</p>
+        <p>{% for i in result_grammar %}
+          - {{i}} <br>
+        {%endfor %}</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="alert alert-success" role="alert">
+        <p class="alert-heading">Hasil Clear Duplicate</p>
+        <p>{% for i in result_clear_duplicate %}
+          - {{i}} <br>
+        {%endfor %}</p>
+      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
